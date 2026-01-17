@@ -34,7 +34,7 @@ public partial class FindOutMorePage : ContentPage
     }
     private async void BmiCalc(object sender, EventArgs e)
     {
-        await DisplayAlert("Functionality not implemented", "This feature is not implemented yet.", "OK");
+        await Shell.Current.GoToAsync("BmiIndexPage");
     }
     private async void MarathonLength(object sender, EventArgs e)
     {
@@ -46,6 +46,6 @@ public partial class FindOutMorePage : ContentPage
     }
     private async void BmrCalc(object sender, EventArgs e)
     {
-        await DisplayAlert("Functionality not implemented", "This feature is not implemented yet.", "OK");
+        await Shell.Current.GoToAsync("BmrIndexPage");
     }
 }

@@ -527,3 +527,15 @@ C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\
 C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Session-7-Dennis-Hilfinger\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Session-7-Dennis-Hilfinger\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Session-7-Dennis-Hilfinger\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Executable\net9.0-windows10.0.19041.0\win10-x64\bmi_healthy_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Executable\net9.0-windows10.0.19041.0\win10-x64\bmi_obese_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Executable\net9.0-windows10.0.19041.0\win10-x64\bmi_overweight_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Executable\net9.0-windows10.0.19041.0\win10-x64\bmi_underweight_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Executable\net9.0-windows10.0.19041.0\win10-x64\female_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Executable\net9.0-windows10.0.19041.0\win10-x64\male_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Session-7-Dennis-Hilfinger\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\bmi_healthy_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Session-7-Dennis-Hilfinger\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\bmi_obese_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Session-7-Dennis-Hilfinger\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\bmi_overweight_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Session-7-Dennis-Hilfinger\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\bmi_underweight_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Session-7-Dennis-Hilfinger\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\female_icon.scale-100.png
+C:\2_WorldSkills\Training\Sao_Paulo_2015\WS-Skill09-Sao-Paulo-Project-Session-7\Session-7-Dennis-Hilfinger\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\male_icon.scale-100.png

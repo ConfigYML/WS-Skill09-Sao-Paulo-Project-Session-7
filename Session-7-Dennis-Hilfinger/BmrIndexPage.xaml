@@ -2,11 +2,242 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Session_7_Dennis_Hilfinger.BmrIndexPage"
-             Title="BmrIndexPage">
-    <VerticalStackLayout>
+             Title="">
+    <Grid 
+RowDefinitions="*, 5*, *"
+ColumnDefinitions="*"
+VerticalOptions="Fill"
+HorizontalOptions="Fill">
+        <Grid 
+    ColumnDefinitions="*,4*,*"
+    HorizontalOptions="Fill"
+    VerticalOptions="End">
+            <Image 
+        Source="logo_2015_full_colour.png"
+        Margin="20"/>
+            <Label 
+        Grid.Column="1"
+        FontSize="40"
+        Text="MarathonSkills 2015"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        Padding="20"/>
+            <Button 
+        Grid.Column="2"
+        Text="Logout"
+        WidthRequest="200"
+        HeightRequest="50"
+        Style="{StaticResource ButtonGreen}"
+        Clicked="Logout"/>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="Auto, *"
+            WidthRequest="1000"
+            RowSpacing="10">
+
+            <VerticalStackLayout
+                Spacing="10">
+                <Label 
+                    Text="BMR calculator"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+                <HorizontalStackLayout
+                Spacing="25"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                WidthRequest="700">
+                    <VerticalStackLayout
+                    WidthRequest="350"
+                    Spacing="15">
+                        <Label
+                        Text="BMR stands for Basal Metabolic Rate. The BMR is used as a measure of an adult's metabolism, which changes with height, weight, age and a variety of medical factors."
+                        FontSize="16"/>
+                        <HorizontalStackLayout
+                        Spacing="15">
+
+                            <Border
+                            StrokeThickness="2"
+                            Stroke="Black"
+                            Padding="5" 
+                            x:Name="MaleBorder">
+                                <Image
+                            Source="male_icon.png"
+                            WidthRequest="100"
+                            HeightRequest="100">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                    Tapped="MaleIconTapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Border>
+
+                            <Border
+                            StrokeThickness="0"
+                            Stroke="Black"
+                            Padding="5" 
+                            x:Name="FemaleBorder">
+                                <Image
+                                Source="female_icon.png"
+                                WidthRequest="100"
+                                HeightRequest="100">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Tapped="FemaleIconTapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Border>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout 
+                        Spacing="10">
+                            <Label
+                            Text="Height:"
+                            FontSize="16"/>
+                            <Entry
+                            x:Name="HeightEntry"
+                            WidthRequest="200"/>
+                            <Label
+                            Text="cm"
+                            FontSize="16"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout 
+                        Spacing="10">
+                            <Label
+                            Text="Weight:"
+                            FontSize="16"/>
+                            <Entry
+                            x:Name="WeightEntry"
+                            WidthRequest="200"/>
+                            <Label
+                            Text="kg"
+                            FontSize="16"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout 
+                        Spacing="10">
+                            <Label
+                            Text="Age:"
+                            FontSize="16"/>
+                            <Entry
+                            x:Name="AgeEntry"
+                            WidthRequest="200"/>
+                            <Label
+                            Text="years"
+                            FontSize="16"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                        Spacing="10">
+                            <Button
+                            Text="Calculate"
+                            WidthRequest="150"
+                            HeightRequest="40"
+                            FontSize="16"
+                            Style="{StaticResource ButtonBlue}"
+                            Clicked="Calculate"/>
+                            <Button
+                            Text="Cancel"
+                            WidthRequest="150"
+                            HeightRequest="40"
+                            FontSize="16"
+                            Style="{StaticResource ButtonYellow}"
+                            Clicked="Cancel"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout
+                    WidthRequest="350"
+                    Spacing="10">
+                        <Label
+                            Text="The BMR is dependant on the general amount of excercise a person is getting generally. For more information see below."
+                            FontSize="16"
+                            HorizontalOptions="Center"
+                            WidthRequest="300"/>
+                        <Label
+                            FontSize="24"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Text="Your BMR"/>
+                        <Label
+                            FontSize="30"
+                            HorizontalTextAlignment="Center"
+                            x:Name="BMR_Label"/>
+
+                        <HorizontalStackLayout 
+                            Spacing="5">
+                            <Label
+                                Text="Daily calories burned"
+                                FontSize="22"
+                                FontAttributes="Bold"/>
+                            <Button
+                                Clicked="MoreInfo"
+                                Text="?"
+                                Style="{StaticResource ButtonYellow}"/>
+                        </HorizontalStackLayout>
+                        <Grid ColumnDefinitions="*, *"
+                              RowDefinitions="*, *, *, *, *">
+                            <Label 
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Text="Sedentiary:"/>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                x:Name="Sedentiary"/>
+
+                            <Label 
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Text="Lightly active:"/>
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                x:Name="LightlyActive"/>
+
+                            <Label 
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Text="Moderately active:"/>
+                            <Label
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                x:Name="ModeratelyActive"/>
+
+                            <Label 
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                Text="Very active:"/>
+                            <Label
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                x:Name="VeryActive"/>
+
+                            <Label 
+                                Grid.Row="4"
+                                Grid.Column="0"
+                                Text="Extremely active:"/>
+                            <Label
+                                Grid.Row="4"
+                                Grid.Column="1"
+                                x:Name="ExtremelyActive"/>
+                        </Grid>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+
+
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+    </Grid>
 </ContentPage>

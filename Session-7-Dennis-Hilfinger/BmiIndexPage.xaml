@@ -2,11 +2,175 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Session_7_Dennis_Hilfinger.BmiIndexPage"
-             Title="BmiIndexPage">
-    <VerticalStackLayout>
+             Title="">
+    <Grid 
+        RowDefinitions="*, 5*, *"
+        ColumnDefinitions="*"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+        <Grid 
+            ColumnDefinitions="*,4*,*"
+            HorizontalOptions="Fill"
+            VerticalOptions="End">
+            <Image 
+                Source="logo_2015_full_colour.png"
+                Margin="20"/>
+            <Label 
+                Grid.Column="1"
+                FontSize="40"
+                Text="MarathonSkills 2015"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Padding="20"/>
+            <Button 
+                Grid.Column="2"
+                Text="Logout"
+                WidthRequest="200"
+                HeightRequest="50"
+                Style="{StaticResource ButtonGreen}"
+                Clicked="Logout"/>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="Auto, *"
+            WidthRequest="1000"
+            RowSpacing="10">
+
+            <VerticalStackLayout
+                Spacing="10">
+                <Label 
+                    Text="BMI calculator"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+                <HorizontalStackLayout
+                    Spacing="25"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    WidthRequest="800">
+                    <VerticalStackLayout
+                        WidthRequest="350"
+                        Spacing="15">
+                        <Label
+                            Text="The BMI Index (Body Mass Index) is a simple calculation using a person's height and weight. The BMI is a reliable indicator of body fatness for most people and is used to screen for weight categories that may lead to health problems."
+                            FontSize="16"/>
+                        <HorizontalStackLayout
+                            Spacing="15">
+
+                            <Border
+                                StrokeThickness="2"
+                                Stroke="Black"
+                                Padding="5" 
+                                x:Name="MaleBorder">
+                                <Image
+                                Source="male_icon.png"
+                                WidthRequest="100"
+                                HeightRequest="100">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Tapped="MaleIconTapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Border>
+
+                            <Border
+                                StrokeThickness="0"
+                                Stroke="Black"
+                                Padding="5" 
+                                x:Name="FemaleBorder">
+                                <Image
+                                    Source="female_icon.png"
+                                    WidthRequest="100"
+                                    HeightRequest="100">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Tapped="FemaleIconTapped"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Border>
+
+
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <Label
+                                Text="Height:"
+                                FontSize="16"/>
+                            <Entry
+                                x:Name="HeightEntry"
+                                WidthRequest="200"/>
+                            <Label
+                                Text="cm"
+                                FontSize="16"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <Label
+                                Text="Weight:"
+                                FontSize="16"/>
+                            <Entry
+                                x:Name="WeightEntry"
+                                WidthRequest="200"/>
+                            <Label
+                                Text="kg"
+                                FontSize="16"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Spacing="10">
+                            <Button
+                                Text="Calculate"
+                                WidthRequest="150"
+                                HeightRequest="40"
+                                FontSize="16"
+                                Style="{StaticResource ButtonBlue}"
+                                Clicked="Calculate"/>
+                            <Button
+                                Text="Cancel"
+                                WidthRequest="150"
+                                HeightRequest="40"
+                                FontSize="16"
+                                Style="{StaticResource ButtonYellow}"
+                                Clicked="Cancel"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout
+                        WidthRequest="450"
+                        Spacing="10">
+                        <Image
+                            x:Name="BodyImage"
+                            WidthRequest="200"/>
+                        <Label
+                            x:Name="CategoryLabel"
+                            FontSize="22"
+                            HorizontalTextAlignment="Center"
+                            Text="Category: "/>
+                        <Label
+                            Text="Underweight: BMI 18.5 or smaller"
+                            HorizontalTextAlignment="Center"/>
+                        <Label
+                            Text="Normal weight: BMI between 18.5 and 24.9"
+                            HorizontalTextAlignment="Center"/>
+                        <Label
+                            Text="Overweight: BMI between 25 and 29.9"
+                            HorizontalTextAlignment="Center"/>
+                        <Label
+                            Text="Obesity: BMI 30 or greater"
+                            HorizontalTextAlignment="Center"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+
+        </Grid>
+
+
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+    </Grid>
 </ContentPage>

@@ -56,6 +56,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\bmi_icons\bmi_healthy_icon.png" />
+	  <None Remove="Resources\Images\bmi_icons\bmi_obese_icon.png" />
+	  <None Remove="Resources\Images\bmi_icons\bmi_overweight_icon.png" />
+	  <None Remove="Resources\Images\bmi_icons\bmi_underweight_icon.png" />
 	  <None Remove="Resources\Images\Charities\arise_logo.png" />
 	  <None Remove="Resources\Images\Charities\aves_do_brazil_logo.png" />
 	  <None Remove="Resources\Images\Charities\clara_santos_oliveira_institute_logo.png" />
@@ -70,6 +74,8 @@
 	  <None Remove="Resources\Images\Charities\the_red_cross_logo.png" />
 	  <None Remove="Resources\Images\Charities\upbeat_logo.png" />
 	  <None Remove="Resources\Images\Charities\wwsm_rescue_logo.png" />
+	  <None Remove="Resources\Images\gender_icons\female_icon.png" />
+	  <None Remove="Resources\Images\gender_icons\male_icon.png" />
 	  <None Remove="Resources\Images\length-images\distance\airbus_a380.jpg" />
 	  <None Remove="Resources\Images\length-images\distance\bus.jpg" />
 	  <None Remove="Resources\Images\length-images\distance\football_field.jpg" />
@@ -98,6 +104,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Include="Resources\Images\bmi_icons\bmi_healthy_icon.png" />
+	  <MauiImage Include="Resources\Images\bmi_icons\bmi_obese_icon.png" />
+	  <MauiImage Include="Resources\Images\bmi_icons\bmi_overweight_icon.png" />
+	  <MauiImage Include="Resources\Images\bmi_icons\bmi_underweight_icon.png" />
 	  <MauiImage Include="Resources\Images\Charities\arise_logo.png" />
 	  <MauiImage Include="Resources\Images\Charities\aves_do_brazil_logo.png" />
 	  <MauiImage Include="Resources\Images\Charities\clara_santos_oliveira_institute_logo.png" />
@@ -112,6 +122,8 @@
 	  <MauiImage Include="Resources\Images\Charities\the_red_cross_logo.png" />
 	  <MauiImage Include="Resources\Images\Charities\upbeat_logo.png" />
 	  <MauiImage Include="Resources\Images\Charities\wwsm_rescue_logo.png" />
+	  <MauiImage Include="Resources\Images\gender_icons\female_icon.png" />
+	  <MauiImage Include="Resources\Images\gender_icons\male_icon.png" />
 	  <MauiImage Include="Resources\Images\length-images\distance\airbus_a380.jpg" />
 	  <MauiImage Include="Resources\Images\length-images\distance\bus.jpg" />
 	  <MauiImage Include="Resources\Images\length-images\distance\football_field.jpg" />

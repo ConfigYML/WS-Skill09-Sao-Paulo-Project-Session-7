@@ -15,3 +15,4 @@ Admin with email 'dennis@gmail.com' was added with password 'asdW1!'
 Changed password of user 'a.adkin@dayrep.net' to 'asdW1!'
 
 # Missing functionality
+So far only the info for the different types of 'fitness levels' in the BMR calculator is missing.
