@@ -52,7 +52,7 @@ public partial class BmrIndexPage : ContentPage
             {
                 bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
             }
-            Sedentiary.Text = (bmr * 1.2).ToString("F2");
+            Sedentary.Text = (bmr * 1.2).ToString("F2");
             LightlyActive.Text = (bmr * 1.375).ToString("F2");
             ModeratelyActive.Text = (bmr * 1.55).ToString("F2");
             VeryActive.Text = (bmr * 1.725).ToString("F2");
@@ -86,6 +86,10 @@ public partial class BmrIndexPage : ContentPage
 
     private async void MoreInfo(object sender, EventArgs e)
     {
-        await DisplayAlert("Info", "Feature not implemented yet.", "Ok");
+
+        Microsoft.Maui.Controls.Window window = new Microsoft.Maui.Controls.Window(new CaloryInfoPage());
+
+
+        Microsoft.Maui.Controls.Application.Current.OpenWindow(window);
     }
 }

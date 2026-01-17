@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|c:\\2_worldskills\\training\\sao_paulo_2015\\ws-skill09-sao-paulo-project-session-7\\session-7-dennis-hilfinger\\bmrindexpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|solutionrelative:bmrindexpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|c:\\2_worldskills\\training\\sao_paulo_2015\\ws-skill09-sao-paulo-project-session-7\\session-7-dennis-hilfinger\\bmrindexpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|solutionrelative:bmrindexpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|c:\\2_worldskills\\training\\sao_paulo_2015\\ws-skill09-sao-paulo-project-session-7\\session-7-dennis-hilfinger\\bmiindexpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|solutionrelative:bmiindexpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|c:\\2_worldskills\\training\\sao_paulo_2015\\ws-skill09-sao-paulo-project-session-7\\session-7-dennis-hilfinger\\bmrindexpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|solutionrelative:bmrindexpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|c:\\2_worldskills\\training\\sao_paulo_2015\\ws-skill09-sao-paulo-project-session-7\\session-7-dennis-hilfinger\\bmiindexpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|solutionrelative:bmiindexpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|c:\\2_worldskills\\training\\sao_paulo_2015\\ws-skill09-sao-paulo-project-session-7\\session-7-dennis-hilfinger\\bmiindexpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|solutionrelative:bmiindexpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|c:\\2_worldskills\\training\\sao_paulo_2015\\ws-skill09-sao-paulo-project-session-7\\session-7-dennis-hilfinger\\caloryinfopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{DAF84D9D-0FE1-4FB0-BBD8-9FB33039FCC3}|Session-7-Dennis-Hilfinger.csproj|solutionrelative:caloryinfopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,20 +38,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "CaloryInfoPage.xaml",
+              "DocumentMoniker": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\CaloryInfoPage.xaml",
+              "RelativeDocumentMoniker": "CaloryInfoPage.xaml",
+              "ToolTip": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\CaloryInfoPage.xaml",
+              "RelativeToolTip": "CaloryInfoPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-17T18:47:20.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BmiIndexPage.xaml.cs",
               "DocumentMoniker": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\BmiIndexPage.xaml.cs",
               "RelativeDocumentMoniker": "BmiIndexPage.xaml.cs",
               "ToolTip": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\BmiIndexPage.xaml.cs",
               "RelativeToolTip": "BmiIndexPage.xaml.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwA8AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAIwA8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-17T17:42:34.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BmiIndexPage.xaml",
               "DocumentMoniker": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\BmiIndexPage.xaml",
               "RelativeDocumentMoniker": "BmiIndexPage.xaml",
@@ -60,26 +77,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BmrIndexPage.xaml",
               "DocumentMoniker": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\BmrIndexPage.xaml",
               "RelativeDocumentMoniker": "BmrIndexPage.xaml",
               "ToolTip": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\BmrIndexPage.xaml",
               "RelativeToolTip": "BmrIndexPage.xaml",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAowKkAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAowL0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-01-17T17:42:34.234Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BmrIndexPage.xaml.cs",
               "DocumentMoniker": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\BmrIndexPage.xaml.cs",
               "RelativeDocumentMoniker": "BmrIndexPage.xaml.cs",
               "ToolTip": "C:\\2_WorldSkills\\Training\\Sao_Paulo_2015\\WS-Skill09-Sao-Paulo-Project-Session-7\\Session-7-Dennis-Hilfinger\\BmrIndexPage.xaml.cs",
               "RelativeToolTip": "BmrIndexPage.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwFkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-17T17:42:33.631Z",
               "EditorCaption": ""

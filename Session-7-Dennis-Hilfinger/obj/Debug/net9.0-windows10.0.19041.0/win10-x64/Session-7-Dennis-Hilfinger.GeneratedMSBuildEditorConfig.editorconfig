@@ -84,6 +84,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Session_7_Dennis_Hilfinger
 build_metadata.AdditionalFiles.TargetPath = BmrIndexPage.xaml
 build_metadata.AdditionalFiles.RelativePath = BmrIndexPage.xaml
 
+[C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-7/Session-7-Dennis-Hilfinger/CaloryInfoPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Session_7_Dennis_Hilfinger.CaloryInfoPage.xaml
+build_metadata.AdditionalFiles.TargetPath = CaloryInfoPage.xaml
+build_metadata.AdditionalFiles.RelativePath = CaloryInfoPage.xaml
+
 [C:/2_WorldSkills/Training/Sao_Paulo_2015/WS-Skill09-Sao-Paulo-Project-Session-7/Session-7-Dennis-Hilfinger/CertificatePreviewPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Session_7_Dennis_Hilfinger.CertificatePreviewPage.xaml
