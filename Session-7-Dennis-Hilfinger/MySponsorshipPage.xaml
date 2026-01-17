@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.MySponsorshipPage"
+             Title="">
+    <Grid 
+    RowDefinitions="*, 5*, *"
+    ColumnDefinitions="*"
+    VerticalOptions="Fill"
+    HorizontalOptions="Fill">
+        <Grid 
+        ColumnDefinitions="*,4*,*"
+        HorizontalOptions="Fill"
+        VerticalOptions="End">
+            <Image 
+            Source="logo_2015_full_colour.png"
+            Margin="20"/>
+            <Label 
+            Grid.Column="1"
+            FontSize="40"
+            Text="MarathonSkills 2015"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            Padding="20"/>
+            <Button 
+            Grid.Column="2"
+            Text="Logout"
+            WidthRequest="200"
+            HeightRequest="50"
+            Style="{StaticResource ButtonGreen}"
+            Clicked="Logout"/>
+        </Grid>
+
+        <ScrollView
+    Grid.Row="1"
+    VerticalOptions="Start">
+            <VerticalStackLayout
+        Spacing="25">
+                <Label 
+            Text="My sponsorship"
+            HorizontalOptions="Center"
+            FontSize="32"/>
+                <Label 
+            Text="This shows all the sponsorships you have received for Marathon Skills 2015."
+            HorizontalOptions="Center"
+            FontSize="20"/>
+                <Grid
+            ColumnDefinitions="*,*"
+            Padding="10"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center">
+
+                    <VerticalStackLayout 
+                WidthRequest="500"
+                Spacing="10" 
+                Padding="25">
+                        <Label
+                            Text="Name of the charity"
+                            FontAttributes="Bold"
+                            FontSize="30" />
+                        <Image
+                            x:Name="CharityImg"
+                            HeightRequest="300"
+                            WidthRequest="300"/>
+                        <Label
+                            x:Name="CharityText"/>
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout 
+                Grid.Column="2"
+                WidthRequest="500"
+                Spacing="10"
+                        Padding="25">
+
+                        <Grid
+                            x:Name="SponsorGrid"
+                            ColumnDefinitions="2*, *"
+                            RowDefinitions="*, *"
+                            VerticalOptions="Start"
+                            RowSpacing="10">
+
+                            <Label 
+                            Text="Sponsor"
+                                FontAttributes="Bold"
+                                FontSize="28"
+                            Grid.Row="0"
+                            Grid.Column="0"/>
+                            <Label
+                            Text="Amount"
+                                FontAttributes="Bold"
+                                FontSize="28"
+                            Grid.Row="0"
+                            Grid.Column="1"/>
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </Grid>
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <Label 
+    x:Name="TimerLabel"
+    Grid.Row="2"
+    HorizontalOptions="Fill"
+    VerticalOptions="End"
+    Text="0 days 0 hours and 0 minutes until the race starts!"
+    HorizontalTextAlignment="Center"
+    Padding="20"
+    Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

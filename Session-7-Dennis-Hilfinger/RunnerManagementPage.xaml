@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.RunnerManagementPage"
+             Title="">
+
+    <Grid 
+        RowDefinitions="*, 5*, *"
+        ColumnDefinitions="*"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+        <Grid 
+            ColumnDefinitions="*,4*,*"
+            HorizontalOptions="Fill"
+            VerticalOptions="End">
+            <Image 
+                Source="logo_2015_full_colour.png"
+                Margin="20"/>
+            <Label 
+                Grid.Column="1"
+                FontSize="40"
+                Text="MarathonSkills 2015"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Padding="20"/>
+            <Button 
+                Grid.Column="2"
+                Text="Logout"
+                WidthRequest="200"
+                HeightRequest="50"
+                Style="{StaticResource ButtonGreen}"
+                Clicked="Logout"/>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="Auto, Auto, *"
+            VerticalOptions="Start"
+            Padding="30">
+
+            <VerticalStackLayout
+                Grid.Row="0">
+
+                <Label 
+                    Text="Runner management"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+                <HorizontalStackLayout 
+                    WidthRequest="700">
+
+                    <VerticalStackLayout
+                        WidthRequest="300">
+                        <Label
+                            Text="Sort and filter"
+                            FontSize="24"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"/>
+                        <HorizontalStackLayout
+                            HorizontalOptions="End"
+                            Margin="0, 0, 100, 0"
+                            Spacing="10">
+                            <Label
+                                Text="Status:"/>
+                            <Picker
+                            x:Name="StatusPicker"
+                                WidthRequest="100"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            HorizontalOptions="End"
+                            Margin="0, 0, 100, 0"
+                            Spacing="10">
+                            <Label
+                                Text="Race event:"/>
+                            <Picker
+                            x:Name="EventTypePicker"
+                                WidthRequest="100"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            HorizontalOptions="End"
+                            Margin="0, 0, 100, 0"
+                            Spacing="10">
+                            <Label
+                                Text="Sort by:"/>
+                            <Picker
+                            x:Name="SortingPicker"
+                                WidthRequest="100"/>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+
+                    <Button 
+                        Text="Refresh"
+                        Clicked="Refresh"
+                        WidthRequest="100"
+                        HeightRequest="50"
+                        Margin="25, 80, 25, 0"
+                        Style="{StaticResource ButtonBlue}"/>
+
+                    <VerticalStackLayout
+                        WidthRequest="200"
+                        Spacing="15">
+                        <Label
+                            Text="Export"
+                            FontSize="24"
+                            FontAttributes="Bold"
+                            HorizontalTextAlignment="Center"/>
+                        <Button 
+                            Text="Runner details (CSV)"
+                            Clicked="ExportRunnerDetails"
+                            Style="{StaticResource ButtonYellow}" />
+                        <Button 
+                            Text="Email address list"
+                            Clicked="ShowMailAddressList"
+                            Style="{StaticResource ButtonYellow}" />
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Grid.Row="1">
+                <Label
+            HorizontalTextAlignment="Center"
+                Text="Total runners:"/>
+                <Label
+                x:Name="TotalRunnersLabel"/>
+            </HorizontalStackLayout>
+
+            <CollectionView 
+                ItemsSource="{Binding CurrentRunners}"
+                Grid.Row="2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid 
+                        ColumnDefinitions="2*, 2*, 6*, 4*, *"
+                        RowDefinitions="*, *"
+                        x:Name="ResultsGrid"
+                        WidthRequest="800">
+                            <Label
+                            Grid.Column="0"
+                            Text="{Binding FirstName}"/>
+                            <Label
+                            Grid.Column="1"
+                            Text="{Binding LastName}"/>
+                            <Label
+                            Grid.Column="2"
+                            Text="{Binding runner.Email}"/>
+                            <Label
+                            Grid.Column="3"
+                            Text="{Binding status.RegistrationStatus1}"/>
+                            <Button
+                            Text="Edit"
+                            Clicked="EditRunner"
+                            CommandParameter="{Binding .}"
+                            Grid.Column="4"/>
+                        </Grid>
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+        <Label 
+        x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.AddEditCharityPage"
+             Title="">
+    <Grid 
+RowDefinitions="*, 5*, *"
+ColumnDefinitions="*"
+VerticalOptions="Fill"
+HorizontalOptions="Fill">
+        <Grid 
+    ColumnDefinitions="*,4*,*"
+    HorizontalOptions="Fill"
+    VerticalOptions="End">
+            <Image 
+        Source="logo_2015_full_colour.png"
+        Margin="20"/>
+            <Label 
+        Grid.Column="1"
+        FontSize="40"
+        Text="MarathonSkills 2015"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        Padding="20"/>
+            <Button 
+        Grid.Column="2"
+        Text="Logout"
+        WidthRequest="200"
+        HeightRequest="50"
+        Style="{StaticResource ButtonGreen}"
+        Clicked="Logout"/>
+        </Grid>
+
+        <ScrollView
+            Grid.Row="1"
+            VerticalOptions="Start">
+            <VerticalStackLayout
+                Spacing="25">
+                <Label 
+                    Text="Add/Edit charity"
+                    HorizontalOptions="Center"
+                    FontSize="32"
+                    x:Name="HeadingLabel"/>
+                <HorizontalStackLayout
+                    WidthRequest="800"
+                    Spacing="100">
+                    <VerticalStackLayout
+                        Spacing="10"
+                        WidthRequest="350">
+                        <Label
+                            Text="Name:"/>
+                        <Entry
+                            x:Name="NameEntry"
+                            Placeholder="Charity Name"
+                            Margin="0, 0, 0, 20"/>
+                        <Label
+                            Text="Description:"/>
+                        <Editor
+                            x:Name="DescriptionEntry"
+                            Placeholder="Description of the Charity"
+                            HeightRequest="250"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout
+                        Spacing="10"
+                        WidthRequest="350">
+                        <Label
+                            Text="Leave the 'logo file' field blank if you do not want to change the logo."/>
+                        <Label
+                            Text="Logo file:"/>
+                        <HorizontalStackLayout Spacing="10">
+                            <Entry
+                            x:Name="LogoFileEntry"
+                            Placeholder="File path"
+                                WidthRequest="250"/>
+                            <Button
+                            Style="{StaticResource ButtonYellow}"
+                            Text="Browse..." 
+                            Clicked="ChooseLogo"/>
+                        </HorizontalStackLayout>
+                        <Label
+                            Text="Current logo:"/>
+                        <Image
+                            Margin="0, 25, 0, 0"
+                            x:Name="CurrentLogoImg"
+                            WidthRequest="200"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout
+                    Spacing="15"
+                    HorizontalOptions="Center">
+                    <Button 
+                        Text="Save"
+                        WidthRequest="250"
+                        HeightRequest="50"
+                        Style="{StaticResource ButtonBlue}"
+                        Clicked="SaveData"/>
+                    <Button 
+                        Text="Cancel"
+                        WidthRequest="250"
+                        HeightRequest="50"
+                        Style="{StaticResource ButtonYellow}"
+                        Clicked="Cancel"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <Label 
+            x:Name="TimerLabel"
+            Grid.Row="2"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Text="0 days 0 hours and 0 minutes until the race starts!"
+            HorizontalTextAlignment="Center"
+            Padding="20"
+            Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

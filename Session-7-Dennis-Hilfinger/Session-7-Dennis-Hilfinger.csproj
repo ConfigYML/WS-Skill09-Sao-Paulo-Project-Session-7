@@ -1,0 +1,257 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net9.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net9.0-tizen</TargetFrameworks> -->
+
+		<!-- Note for MacCatalyst:
+		The default runtime is maccatalyst-x64, except in Release config, in which case the default is maccatalyst-x64;maccatalyst-arm64.
+		When specifying both architectures, use the plural <RuntimeIdentifiers> instead of the singular <RuntimeIdentifier>.
+		The Mac App Store will NOT accept apps with ONLY maccatalyst-arm64 indicated;
+		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
+		<!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
+
+		<OutputType>Exe</OutputType>
+		<RootNamespace>Session_7_Dennis_Hilfinger</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutputPath>../Executable/</OutputPath>
+
+		<!-- Display name -->
+		<ApplicationTitle>Session-7-Dennis-Hilfinger</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.session1dennishilfinger</ApplicationId>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
+		<WindowsPackageType>None</WindowsPackageType>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+		
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\Charities\arise_logo.png" />
+	  <None Remove="Resources\Images\Charities\aves_do_brazil_logo.png" />
+	  <None Remove="Resources\Images\Charities\clara_santos_oliveira_institute_logo.png" />
+	  <None Remove="Resources\Images\Charities\conquer_cancer_brazil.png" />
+	  <None Remove="Resources\Images\Charities\diabetes_brazil_logo.png" />
+	  <None Remove="Resources\Images\Charities\heart_health_sao_paulo_logo.png" />
+	  <None Remove="Resources\Images\Charities\human_rights_centre_logo.png" />
+	  <None Remove="Resources\Images\Charities\oxfam_international_logo.png" />
+	  <None Remove="Resources\Images\Charities\querstadtein_logo.png" />
+	  <None Remove="Resources\Images\Charities\save_the_children_fund_logo.png" />
+	  <None Remove="Resources\Images\Charities\stay_pumped_logo.png" />
+	  <None Remove="Resources\Images\Charities\the_red_cross_logo.png" />
+	  <None Remove="Resources\Images\Charities\upbeat_logo.png" />
+	  <None Remove="Resources\Images\Charities\wwsm_rescue_logo.png" />
+	  <None Remove="Resources\Images\length-images\distance\airbus_a380.jpg" />
+	  <None Remove="Resources\Images\length-images\distance\bus.jpg" />
+	  <None Remove="Resources\Images\length-images\distance\football_field.jpg" />
+	  <None Remove="Resources\Images\length-images\distance\pair_of_havaianas.jpg" />
+	  <None Remove="Resources\Images\length-images\distance\ronaldinho.jpg" />
+	  <None Remove="Resources\Images\length-images\speed\capybara.jpg" />
+	  <None Remove="Resources\Images\length-images\speed\f1_car.jpg" />
+	  <None Remove="Resources\Images\length-images\speed\horse.png" />
+	  <None Remove="Resources\Images\length-images\speed\jaguar.jpg" />
+	  <None Remove="Resources\Images\length-images\speed\sloth.jpg" />
+	  <None Remove="Resources\Images\length-images\speed\slug.jpg" />
+	  <None Remove="Resources\Images\length-images\speed\worm.jpg" />
+	  <None Remove="Resources\Images\map-icons\map_icon_drinks.png" />
+	  <None Remove="Resources\Images\map-icons\map_icon_energy_bars.png" />
+	  <None Remove="Resources\Images\map-icons\map_icon_information.png" />
+	  <None Remove="Resources\Images\map-icons\map_icon_medical.png" />
+	  <None Remove="Resources\Images\map-icons\map_icon_start.png" />
+	  <None Remove="Resources\Images\map-icons\map_icon_toilets.png" />
+	  <None Remove="Resources\Images\marathon\banco_banespa.jpg" />
+	  <None Remove="Resources\Images\marathon\ibirapuera_park_lake.jpg" />
+	  <None Remove="Resources\Images\marathon\marathon_image.jpg" />
+	  <None Remove="Resources\Images\marathon\marathon_map.jpg" />
+	  <None Remove="Resources\Images\marathon\teatro_municipal.jpg" />
+	  <None Remove="Resources\Images\status_icons\cross_icon.png" />
+	  <None Remove="Resources\Images\status_icons\tick_icon.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\Charities\arise_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\aves_do_brazil_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\clara_santos_oliveira_institute_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\conquer_cancer_brazil.png" />
+	  <MauiImage Include="Resources\Images\Charities\diabetes_brazil_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\heart_health_sao_paulo_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\human_rights_centre_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\oxfam_international_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\querstadtein_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\save_the_children_fund_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\stay_pumped_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\the_red_cross_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\upbeat_logo.png" />
+	  <MauiImage Include="Resources\Images\Charities\wwsm_rescue_logo.png" />
+	  <MauiImage Include="Resources\Images\length-images\distance\airbus_a380.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\distance\bus.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\distance\football_field.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\distance\pair_of_havaianas.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\distance\ronaldinho.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\speed\capybara.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\speed\f1_car.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\speed\horse.png" />
+	  <MauiImage Include="Resources\Images\length-images\speed\jaguar.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\speed\sloth.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\speed\slug.jpg" />
+	  <MauiImage Include="Resources\Images\length-images\speed\worm.jpg" />
+	  <MauiImage Include="Resources\Images\map-icons\map_icon_drinks.png" />
+	  <MauiImage Include="Resources\Images\map-icons\map_icon_energy_bars.png" />
+	  <MauiImage Include="Resources\Images\map-icons\map_icon_information.png" />
+	  <MauiImage Include="Resources\Images\map-icons\map_icon_medical.png" />
+	  <MauiImage Include="Resources\Images\map-icons\map_icon_start.png" />
+	  <MauiImage Include="Resources\Images\map-icons\map_icon_toilets.png" />
+	  <MauiImage Include="Resources\Images\marathon\banco_banespa.jpg" />
+	  <MauiImage Include="Resources\Images\marathon\ibirapuera_park_lake.jpg" />
+	  <MauiImage Include="Resources\Images\marathon\marathon_image.jpg" />
+	  <MauiImage Include="Resources\Images\marathon\marathon_map.jpg" />
+	  <MauiImage Include="Resources\Images\marathon\teatro_municipal.jpg" />
+	  <MauiImage Include="Resources\Images\marathon_skills_2015\marathon_2014_certificate_seal.png" />
+	  <MauiImage Include="Resources\Images\marathon_skills_2015\marathon_2014_logo.png" />
+	  <MauiImage Include="Resources\Images\status_icons\cross_icon.png" />
+	  <MauiImage Include="Resources\Images\status_icons\tick_icon.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.11" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.11" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.11">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.8" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="AboutMarathonSkillsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AddEditCharityPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AddEditUserPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AdminPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AllRaceResultsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="BmiIndexPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="BmrIndexPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CertificatePreviewPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CharityInfoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CharityListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CompetedBeforePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ContactInformationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CoordinatorPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="EditProfilePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="EventConfirmationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="FindOutMorePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ImportVolunteersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="InteractiveMapPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ManageARunnerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ManageCharitiesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ManageVolunteersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MarathonLengthPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MyRaceResultsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MySponsorshipPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RegisterEventPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RegisterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RunnerManagementPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RunnerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="SponsorRunnerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="SponsorshipConfirmationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="SponsorshipOverviewPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="UserManagementPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

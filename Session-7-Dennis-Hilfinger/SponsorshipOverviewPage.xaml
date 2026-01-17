@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.SponsorshipOverviewPage"
+             Title="">
+    <Grid 
+    RowDefinitions="*, 5*, *"
+    ColumnDefinitions="*"
+    VerticalOptions="Fill"
+    HorizontalOptions="Fill">
+        <Grid 
+        ColumnDefinitions="*,4*,*"
+        HorizontalOptions="Fill"
+        VerticalOptions="End">
+            <Image 
+            Source="logo_2015_full_colour.png"
+            Margin="20"/>
+            <Label 
+            Grid.Column="1"
+            FontSize="40"
+            Text="MarathonSkills 2015"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            Padding="20"/>
+            <Button 
+            Grid.Column="2"
+            Text="Logout"
+            WidthRequest="200"
+            HeightRequest="50"
+            Style="{StaticResource ButtonGreen}"
+            Clicked="Logout"/>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="Auto, *">
+
+            <VerticalStackLayout
+                Spacing="25"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center">
+                <Label 
+                    Text="Sponsorship overview"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+                <HorizontalStackLayout
+                    HorizontalOptions="Center">
+                    <Picker
+                        x:Name="SortingPicker">
+                    </Picker>
+                    <Button 
+                        Style="{StaticResource ButtonYellow}"
+                        Text="Sort"
+                        Clicked="SortCharities"/>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    Spacing="10">
+                    <Label
+                        Text="Charities:"
+                        FontAttributes="Bold"
+                        FontSize="16"/>
+                    <Label
+                        x:Name="CharityCountLabel"
+                        Margin="0, 0, 50, 0"
+                        FontSize="16"/>
+                    <Label
+                        Text="Total Sponsorships:"
+                        FontAttributes="Bold"
+                        FontSize="16"/>
+                    <Label
+                        x:Name="TotalSponsorshipsLabel"
+                        FontSize="16"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <CollectionView
+                ItemsSource="{Binding Charities}"
+                Grid.Row="1">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            ColumnDefinitions="*, 2*, *">
+                            <Image
+                                Source="{Binding Filename}"
+                                HeightRequest="50"
+                                WidthRequest="50"/>
+                            <Label
+                                Text="{Binding CharityName}"
+                                Grid.Column="1"/>
+                            <Label
+                                Text="{Binding AmountSum}"
+                                Grid.Column="2"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+
+        <Label 
+            x:Name="TimerLabel"
+            Grid.Row="2"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Text="0 days 0 hours and 0 minutes until the race starts!"
+            HorizontalTextAlignment="Center"
+            Padding="20"
+            Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

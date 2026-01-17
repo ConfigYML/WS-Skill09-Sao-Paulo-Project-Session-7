@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.ImportVolunteersPage"
+             Title="">
+    <Grid 
+RowDefinitions="*, 5*, *"
+ColumnDefinitions="*"
+VerticalOptions="Fill"
+HorizontalOptions="Fill">
+        <Grid 
+    ColumnDefinitions="*,4*,*"
+    HorizontalOptions="Fill"
+    VerticalOptions="End">
+            <Image 
+        Source="logo_2015_full_colour.png"
+        Margin="20"/>
+            <Label 
+        Grid.Column="1"
+        FontSize="40"
+        Text="MarathonSkills 2015"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        Padding="20"/>
+            <Button 
+        Grid.Column="2"
+        Text="Logout"
+        WidthRequest="200"
+        HeightRequest="50"
+        Style="{StaticResource ButtonGreen}"
+        Clicked="Logout"/>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="Auto, *"
+            WidthRequest="1000"
+            RowSpacing="10">
+
+            <VerticalStackLayout
+                Spacing="25"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                WidthRequest="700">
+                <Label 
+                    Text="Import volunteers"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+
+                <HorizontalStackLayout
+                    WidthRequest="700"
+                    Spacing="10">
+                    <Label
+                        Text="CSV list of volunteers:"
+                        FontSize="16"/>
+                    <Entry
+                        x:Name="CsvFileEntry"
+                        WidthRequest="300"/>
+
+                    <Button
+                        Clicked="SelectCsv"
+                        Text="Browse"
+                        HeightRequest="40"
+                        WidthRequest="80"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource ButtonGreen}"/>
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout
+                    WidthRequest="200"
+                    Spacing="10"
+                    HorizontalOptions="Center">
+
+                    <Button
+                        Clicked="Import"
+                        Text="Import"
+                        Style="{StaticResource ButtonBlue}"/>
+                    <Button
+                        Clicked="Cancel"
+                        Text="Cancel"
+                        Style="{StaticResource ButtonYellow}"/>
+                </HorizontalStackLayout>
+                
+                <VerticalStackLayout
+                    WidthRequest="700">
+
+                    <Label 
+                        Text="The CSV file should have the following fields:"
+                        FontSize="16"
+                        Margin="0, 0, 0, 20"
+                        HorizontalOptions="Center"/>
+
+                    <Label 
+                        Text="field1: VolunteerId"
+                        FontSize="16"
+                        HorizontalOptions="Center"/>
+                    <Label 
+                        Text="field2: First Name"
+                        FontSize="16"
+                        HorizontalOptions="Center"/>
+                    <Label 
+                        Text="field3: Last Name"
+                        FontSize="16"
+                        HorizontalOptions="Center"/>
+                    <Label 
+                        Text="field4: Country Code"
+                        FontSize="16"
+                        HorizontalOptions="Center"/>
+                    <Label 
+                        Text="field5: Gender"
+                        FontSize="16"
+                        HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+            
+        </Grid>
+
+
+        <Label 
+        x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

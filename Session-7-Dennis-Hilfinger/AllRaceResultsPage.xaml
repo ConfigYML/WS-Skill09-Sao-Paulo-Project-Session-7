@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.AllRaceResultsPage"
+             Title="">
+    <Grid 
+RowDefinitions="*, 5*, *"
+ColumnDefinitions="*"
+VerticalOptions="Fill"
+HorizontalOptions="Fill">
+        <Grid 
+    ColumnDefinitions="*,4*,*"
+    HorizontalOptions="Fill"
+    VerticalOptions="End">
+            <Image 
+        Source="logo_2015_full_colour.png"
+        Margin="20"/>
+            <Label 
+        Grid.Column="1"
+        FontSize="40"
+        Text="MarathonSkills 2015"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        Padding="20"/>
+            <Button 
+        Grid.Column="2"
+        Text="Logout"
+        WidthRequest="200"
+        HeightRequest="50"
+        Style="{StaticResource ButtonGreen}"
+        Clicked="Logout"/>
+        </Grid>
+
+        <ScrollView
+            Grid.Row="1"
+            VerticalOptions="Start">
+            <VerticalStackLayout
+            Padding="30"
+            Spacing="25"
+                WidthRequest="800"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center">
+
+                <Label 
+                Text="Previous race results"
+                HorizontalOptions="Center"
+                FontSize="32"/>
+
+                <VerticalStackLayout>
+                    <Grid
+                        ColumnDefinitions="5*, 5*, *"
+                        HeightRequest="50">
+                        <HorizontalStackLayout
+                            Grid.Column="0"
+                            Spacing="10"
+                            HorizontalOptions="End"
+                            Margin="0, 0, 100, 0">
+                            <Label
+                                Text="Marathon:"
+                                VerticalTextAlignment="Center"/>
+                            <Picker 
+                                x:Name="MarathonPicker"
+                                HeightRequest="30"
+                                WidthRequest="150"/>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Grid.Column="1"
+                            Spacing="10"
+                            HorizontalOptions="End"
+                            Margin="0, 0, 100, 0">
+                            <Label
+                                Text="Gender:"
+                                VerticalTextAlignment="Center"/>
+                            <Picker 
+                                x:Name="GenderPicker"
+                                HeightRequest="30"
+                                WidthRequest="130"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                    <Grid
+                        ColumnDefinitions="5*,5*,*"
+                        HeightRequest="50">
+
+                        <HorizontalStackLayout
+                            Grid.Column="0"
+                            Spacing="10"
+                            HorizontalOptions="End"
+                            Margin="0, 0, 100, 0">
+                            <Label
+                            Text="Race event:"
+                            VerticalTextAlignment="Center"/>
+                            <Picker 
+                                x:Name="EventTypePicker"
+                                HeightRequest="30"
+                                WidthRequest="150"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            Grid.Column="1"
+                            Spacing="10"
+                            HorizontalOptions="End"
+                            Margin="0, 0, 100, 0">
+                            <Label
+                            Text="Age category:"
+                            VerticalTextAlignment="Center"/>
+                            <Picker 
+                                x:Name="AgeCategoryPicker"
+                                HeightRequest="30"
+                                WidthRequest="130"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            Grid.Column="2"
+                            Spacing="10"
+                            HorizontalOptions="Center">
+                            <Button
+                         Text="Search"
+                         WidthRequest="70"
+                         HeightRequest="30"
+                         FontSize="16"
+                         Style="{StaticResource ButtonBlue}"
+                         Clicked="Search"
+                                x:Name="SearchBtn"/>
+                        </HorizontalStackLayout>
+
+                    </Grid>
+                    <Grid ColumnDefinitions="*, *, *">
+                        <HorizontalStackLayout
+                            Grid.Column="0">
+                            <Label
+                                FontAttributes="Bold"
+                                Text="Total runners:"/>
+                            <Label
+                                x:Name="TotalRunnersLabel"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            Grid.Column="1">
+                            <Label
+                                FontAttributes="Bold"
+                                Text="Total runners finished:"/>
+                            <Label
+                                x:Name="TotalFinishedLabel"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            Grid.Column="2">
+                            <Label
+                                FontAttributes="Bold"
+                                Text="Average race time:"/>
+                            <Label
+                                x:Name="AverageRacetimeLabel"/>
+                        </HorizontalStackLayout>
+                    </Grid>
+                    <Border Stroke="DarkGrey">
+                        <Grid
+                            x:Name="ResultsGrid"
+                            ColumnDefinitions="*, 2*, 4*, *"
+                            RowDefinitions="*">
+                            <Label
+                                FontAttributes="Bold"
+                                Text="Rank"
+                                Grid.Row="0"
+                                Grid.Column="0"/>
+                            <Label
+                                FontAttributes="Bold"
+                                Text="Race time"
+                                Grid.Row="0"
+                                Grid.Column="1"/>
+                            <Label
+                                FontAttributes="Bold"
+                                Text="Runner name"
+                                Grid.Row="0"
+                                Grid.Column="2"/>
+                            <Label
+                                FontAttributes="Bold"
+                                Text="Country"
+                                Grid.Row="0"
+                                Grid.Column="3"/>
+
+                        </Grid>
+                    </Border>
+
+                </VerticalStackLayout>
+
+
+
+
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Label 
+    x:Name="TimerLabel"
+    Grid.Row="2"
+    HorizontalOptions="Fill"
+    VerticalOptions="End"
+    Text="0 days 0 hours and 0 minutes until the race starts!"
+    HorizontalTextAlignment="Center"
+    Padding="20"
+    Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

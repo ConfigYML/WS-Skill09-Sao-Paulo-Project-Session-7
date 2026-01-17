@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.ManageARunnerPage"
+             Title="">
+    <Grid 
+    RowDefinitions="*, 5*, *"
+    ColumnDefinitions="*"
+    VerticalOptions="Fill"
+    HorizontalOptions="Fill">
+        <Grid 
+        ColumnDefinitions="*,4*,*"
+        HorizontalOptions="Fill"
+        VerticalOptions="End">
+            <Image 
+            Source="logo_2015_full_colour.png"
+            Margin="20"/>
+            <Label 
+            Grid.Column="1"
+            FontSize="40"
+            Text="MarathonSkills 2015"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            Padding="20"/>
+            <Button 
+            Grid.Column="2"
+            Text="Logout"
+            WidthRequest="200"
+            HeightRequest="50"
+            Style="{StaticResource ButtonGreen}"
+            Clicked="Logout"/>
+        </Grid>
+
+        <ScrollView
+        Grid.Row="1"
+        VerticalOptions="Start">
+            <VerticalStackLayout
+            Padding="30"
+            Spacing="25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center">
+
+                <Label 
+                Text="Manage a runner"
+                HorizontalOptions="Center"
+                FontSize="32"/>
+                <Label 
+                Text="Registration status"
+                HorizontalOptions="End"
+                FontSize="24"/>
+                <HorizontalStackLayout 
+                WidthRequest="800">
+                    <Grid
+                        ColumnDefinitions="*, 2*"
+                        ColumnSpacing="10"
+                        RowDefinitions="*, *, *, *, *, *, *, *, *, *"
+                        RowSpacing="10"
+                        WidthRequest="500">
+                        <Label
+                            Text="Email:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="0"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="EmailLabel"
+                            Text="Test"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+                        <Label
+                            Text="First Name:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="1"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="FirstnameLabel"
+                            Text="Test"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+                        <Label
+                            Text="Last Name:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="2"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="LastnameLabel"
+                            Text="Test"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+                        <Label
+                            Text="Gender:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="3"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="GenderLabel"
+                            Text="Test"
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+                        <Label
+                            Text="Date of Birth:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="4"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="DOBLabel"
+                            Text="Test"
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+                        <Label
+                            Text="Country:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="5"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="CountryLabel"
+                            Text="Test"
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+                        <Label
+                            Text="Charity:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="6"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="CharityLabel"
+                            Text="Test"
+                            Grid.Row="6"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+                        <Label
+                            Text="Target to raise:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="7"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="TargetRaiseLabel"
+                            Text="Test"
+                            Grid.Row="7"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+                        <Label
+                            Text="Race Kit Option:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="8"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="RacekitLabel"
+                            Text="Test"
+                            Grid.Row="8"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+
+                        <Label
+                            Text="Race Events:"
+                            HorizontalTextAlignment="Center"
+                            FontAttributes="Bold"
+                            Grid.Row="9"
+                            FontSize="16"
+                            VerticalTextAlignment="Center"/>
+                        <Label
+                            x:Name="RaceEventsLabel"
+                            Text=""
+                            Grid.Row="9"
+                            Grid.Column="1"
+                            VerticalTextAlignment="Center"/>
+
+                    </Grid>
+                    <VerticalStackLayout
+                    WidthRequest="300"
+                    Spacing="15"
+                        x:Name="RegistrationStatusLayout">
+                        <HorizontalStackLayout
+                            HorizontalOptions="Center"
+                            Spacing="10">
+                            <Button 
+                        Text="Preview certificate"
+                        Clicked="PreviewCertificate"
+                        Style="{StaticResource ButtonYellow}" />
+                            <Button 
+                        Text="Edit profile"
+                        Clicked="EditProfile"
+                        Style="{StaticResource ButtonYellow}" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <Label 
+    x:Name="TimerLabel"
+    Grid.Row="2"
+    HorizontalOptions="Fill"
+    VerticalOptions="End"
+    Text="0 days 0 hours and 0 minutes until the race starts!"
+    HorizontalTextAlignment="Center"
+    Padding="20"
+    Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

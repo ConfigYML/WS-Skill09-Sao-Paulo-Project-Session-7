@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.ManageVolunteersPage"
+             Title="">
+    <Grid 
+RowDefinitions="*, 5*, *"
+ColumnDefinitions="*"
+VerticalOptions="Fill"
+HorizontalOptions="Fill">
+        <Grid 
+    ColumnDefinitions="*,4*,*"
+    HorizontalOptions="Fill"
+    VerticalOptions="End">
+            <Image 
+        Source="logo_2015_full_colour.png"
+        Margin="20"/>
+            <Label 
+        Grid.Column="1"
+        FontSize="40"
+        Text="MarathonSkills 2015"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        Padding="20"/>
+            <Button 
+        Grid.Column="2"
+        Text="Logout"
+        WidthRequest="200"
+        HeightRequest="50"
+        Style="{StaticResource ButtonGreen}"
+        Clicked="Logout"/>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="Auto, *"
+            WidthRequest="1000"
+            RowSpacing="10">
+
+            <VerticalStackLayout
+                Spacing="25"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                WidthRequest="700">
+                <Label 
+                    Text="Volunteer Management"
+                    HorizontalOptions="Center"
+                    FontSize="32"/>
+
+                <HorizontalStackLayout
+                    WidthRequest="700">
+                    <VerticalStackLayout
+                        HorizontalOptions="Start"
+                        WidthRequest="350"
+                        Spacing="10">
+                        <Label
+                            Text="Sort"
+                            FontSize="20"
+                            HorizontalOptions="Center"/>
+                        <HorizontalStackLayout
+                            HorizontalOptions="Center"
+                            WidthRequest="350"
+                            Spacing="10">
+                            <Label
+                                Text="Sort by:"
+                                VerticalTextAlignment="Center"/>
+                            <Picker
+                            x:Name="SortingPicker"
+                                WidthRequest="150"/>
+                        </HorizontalStackLayout>
+                        <Button
+                            Text="Refresh"
+                            Style="{StaticResource ButtonBlue}"
+                            Clicked="LoadData"
+                            HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout
+                        HorizontalOptions="End"
+                        WidthRequest="350"
+                        Spacing="10">
+                        <Label
+                            Text="Import"
+                            FontSize="20"
+                            HorizontalOptions="Center"/>
+                        <Button
+                            Clicked="OpenImportPage"
+                            Text="Import volunteers"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource ButtonYellow}"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                
+                <HorizontalStackLayout 
+                    HorizontalOptions="Center">
+                    <Label 
+                        Text="Total Volunteers:"
+                        FontSize="16"
+                        FontAttributes="Bold"/>
+                    <Label
+                        x:Name="VolunteerCountLabel"
+                        FontSize="16"/>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+            <CollectionView
+                ItemsSource="{Binding Volunteers}"
+                Grid.Row="1"
+                WidthRequest="700"
+                x:Name="VolunteerCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            ColumnDefinitions="*, *, *, *"
+                            ColumnSpacing="10">
+                            <Label
+                                Text="{Binding FirstName}"
+                                Grid.Column="0"
+                                VerticalTextAlignment="Center"/>
+                            <Label
+                                Text="{Binding LastName}"
+                                Grid.Column="1"
+                                VerticalTextAlignment="Center"/>
+                            <Label
+                                Text="{Binding CountryCodeNavigation.CountryName}"
+                                Grid.Column="2"
+                                VerticalTextAlignment="Center"/>
+                            <Label
+                                Text="{Binding GenderNavigation.Gender1}"
+                                Grid.Column="3"
+                                VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+
+        <Label 
+        x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>

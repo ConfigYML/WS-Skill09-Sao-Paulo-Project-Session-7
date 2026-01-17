@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.CertificatePreviewPage"
+             Title="">
+    <Grid 
+        RowDefinitions="*, Auto, 5*"
+        ColumnDefinitions="*"
+        VerticalOptions="Fill"
+        HorizontalOptions="Fill">
+        <Grid 
+            ColumnDefinitions="*,4*,*"
+            HorizontalOptions="Fill"
+            VerticalOptions="End">
+            <Image 
+                Source="logo_2015_full_colour.png"
+                Margin="20"/>
+            <Label 
+                Grid.Column="1"
+                FontSize="40"
+                Text="MarathonSkills 2015"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Padding="20"/>
+            <Button 
+                Grid.Column="2"
+                Text="Logout"
+                WidthRequest="200"
+                HeightRequest="50"
+                Style="{StaticResource ButtonGreen}"
+                Clicked="Logout"/>
+        </Grid>
+
+        <HorizontalStackLayout
+            Grid.Row="1"
+            HorizontalOptions="Fill"
+            Spacing="10"
+            Background="DarkGrey"
+            Padding="10">
+            <Label 
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Race event:"
+                VerticalOptions="Center"/>
+
+            <Picker
+                x:Name="EventTypePicker"
+                SelectedIndexChanged="LoadCertificate"
+                HeightRequest="40"/>
+
+        </HorizontalStackLayout>
+        <ScrollView
+            Grid.Row="2"
+            VerticalOptions="Start">
+            
+            <VerticalStackLayout
+                Padding="30"
+                Spacing="20"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                IsVisible="True"
+                x:Name="CertificateLayout">
+                <Image
+                    Source="marathon_2014_logo.png"
+                    WidthRequest="200"/>
+
+                <Label
+                    Text="Congratulations Firstname Lastname for running in the Full Marathon."
+                    x:Name="NameLabel"
+                    LineBreakMode="WordWrap"
+                    HorizontalTextAlignment="Center"/>
+                <Label
+                    Text="You ran a time of 4:13:45 and secured place #183 with that!"
+                    x:Name="TimeLabel"
+                    HorizontalTextAlignment="Center"/>
+                <Label
+                    Text="Certificate of Participation"
+                    FontSize="36"
+                    HorizontalTextAlignment="Center"/>
+                <Label
+                    Text="in"
+                    HorizontalTextAlignment="Center"/>
+                <Label
+                    Text="Marathon Skill 2014"
+                    FontSize="26"
+                    HorizontalTextAlignment="Center"/>
+                <Label
+                    FontSize="20"
+                    Text="Osaka, Japan"
+                    HorizontalTextAlignment="Center"/>
+
+                <Label
+                    Text="You also raised $1300 for Charity Name!"
+                    HorizontalTextAlignment="Center"
+                    x:Name="CharityLabel"/>
+
+                <Image 
+                    Source="marathon_2014_certificate_seal.png"
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    HorizontalOptions="End"/>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

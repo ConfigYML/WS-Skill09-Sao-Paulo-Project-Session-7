@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Session_7_Dennis_Hilfinger.UserManagementPage"
+             Title="">
+    <Grid 
+RowDefinitions="*, 5*, *"
+ColumnDefinitions="*"
+VerticalOptions="Fill"
+HorizontalOptions="Fill">
+        <Grid 
+    ColumnDefinitions="*,4*,*"
+    HorizontalOptions="Fill"
+    VerticalOptions="End">
+            <Image 
+        Source="logo_2015_full_colour.png"
+        Margin="20"/>
+            <Label 
+        Grid.Column="1"
+        FontSize="40"
+        Text="MarathonSkills 2015"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        Padding="20"/>
+            <Button 
+        Grid.Column="2"
+        Text="Logout"
+        WidthRequest="200"
+        HeightRequest="50"
+        Style="{StaticResource ButtonGreen}"
+        Clicked="Logout"/>
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            RowDefinitions="Auto, *"
+            WidthRequest="800">
+
+            <VerticalStackLayout
+            Spacing="25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+                WidthRequest="700">
+                <Label 
+                Text="User management"
+                HorizontalOptions="Center"
+                FontSize="32"/>
+                <HorizontalStackLayout
+                HorizontalOptions="Center"
+                    WidthRequest="700">
+                    <Button
+                        Clicked="AddNewUser"
+                        Text="+ Add new user"
+                        Style="{StaticResource ButtonYellow}"
+                        WidthRequest="200"
+                        HeightRequest="50"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"/>
+                    <VerticalStackLayout 
+                        HorizontalOptions="End"
+                        WidthRequest="500"
+                        Padding="25"
+                        Spacing="10">
+
+                        <HorizontalStackLayout
+                            WidthRequest="400"
+                            HorizontalOptions="End"
+                            Spacing="10">
+                            <Label
+                                Text="Filter by role:"/>
+                            <Picker
+                                x:Name="RolePicker"
+                                WidthRequest="200"
+                                HorizontalOptions="End"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            WidthRequest="400"
+                            HorizontalOptions="End"
+                            Spacing="10">
+                            <Label
+                                Text="Sort by:"/>
+                            <Picker
+                                x:Name="SortingPicker"
+                                WidthRequest="200"
+                                HorizontalOptions="End"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            WidthRequest="400"
+                            HorizontalOptions="End"
+                            Spacing="10">
+                            <Label
+                                Text="Search:"/>
+                            <Entry
+                                Placeholder="Seach for ..."
+                                x:Name="SearchEntry"
+                                WidthRequest="200"
+                                HorizontalOptions="End"/>
+                        </HorizontalStackLayout>
+                        
+                        <Button 
+                            Style="{StaticResource ButtonBlue}"
+                            Text="Refresh"
+                            Clicked="Refresh"
+                            WidthRequest="150"
+                            HeightRequest="50"
+                            HorizontalOptions="End"/>
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+                <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="10">
+                    <Label
+                    Text="Total users:"
+                    FontAttributes="Bold"
+                    FontSize="16"/>
+                    <Label
+                    x:Name="TotalUserCountLabel"
+                    FontSize="16"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            <CollectionView
+                ItemsSource="{Binding Users}"
+                Grid.Row="1"
+                WidthRequest="800">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            ColumnDefinitions="2*, 2*, 4*, 2*, *">
+                            <Label
+                                Text="{Binding FirstName}"/>
+                            <Label
+                                Text="{Binding LastName}"
+                                Grid.Column="1"/>
+                            <Label
+                                Text="{Binding Email}"
+                                Grid.Column="2"/>
+                            <Label
+                                Text="{Binding Role.RoleName}"
+                                Grid.Column="3"/>
+                            <Button
+                                Text="Edit"
+                                Style="{StaticResource ButtonGreen}"
+                                Clicked="EditUser"
+                                CommandParameter="{Binding .}"
+                                Grid.Column="4"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+
+        <Label 
+        x:Name="TimerLabel"
+        Grid.Row="2"
+        HorizontalOptions="Fill"
+        VerticalOptions="End"
+        Text="0 days 0 hours and 0 minutes until the race starts!"
+        HorizontalTextAlignment="Center"
+        Padding="20"
+        Style="{StaticResource TimerLabel}"/>
+    </Grid>
+</ContentPage>
